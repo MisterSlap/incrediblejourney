@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Raleway&display=swap');
+body {
+    background: rgb(88, 84, 92);
+    -webkit-user-select: none;
+                                
+}
+
+.container {
+    max-width: 800px;
+    min-width: 400px;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+   
+}
+
+.hud {
+    text-align: right;
+    padding: 10px;
+    margin: 10px 0;
+    background: rgb(255, 255, 255);
+    border: 1px solid;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hud img {
+    cursor: pointer;
+    opacity: 0.75;
+    transition: .5s opacity;
+    transform: .5s;
+}
+
+.hud img:hover{
+    opacity: 1;
+}
+
+.hud img:active{
+    opacity: 0;
+}
+@media (max-width: 800px) {
+    .control button {
+        padding: 5px;
+        margin: 5px;
+        background: #aaccff;
+        width: 48%;
+        transition: .3s background;
+    }
+    
+    .control button:hover {
+        padding: 5px;
+        margin: 5px;
+        background: #c2daff;
+        width: 48%;
+        cursor: pointer;
+    }
+
+}
+@media (max-width: 540px) {
+    .control button {
+        padding: 5px;
+        margin: 5px;
+        background: #aaccff;
+        width: 80%;
+        transition: .3s background;
+    }
+    
+    .control button:hover {
+        padding: 5px;
+        margin: 5px;
+        background: #c2daff;
+        width: 80%;
+        cursor: pointer;
+    }
+}
+
+.area-max {
+    text-align: justify;
+    overflow: auto;
+    margin: 0 auto;
+    padding: 5px;
+    min-width: 400px;
+    max-width: 800px;
+    height: 520px;
+    border: 1px solid;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    background: rgb(255, 255, 255);   
+}
+
+
+.area-min {
+    text-align: justify;
+    overflow: auto;
+    margin: 0 auto;
+    min-width: 400px;
+    max-width: 800px;
+    height: 200px;
+    padding: 5px;
+    border: 1px solid;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    background: rgb(255, 255, 255);   
+}
+
+.intro {
+    font-family: 'Kurale', serif;
+    text-align: center;
+}
+
+.intro button {
+    padding: 5px;
+    margin: 5px;
+    background: #aaccff;
+    width: 30%;
+    transition: .3s background;
+}
+.intro input {
+    padding: 5px;
+    margin: 5px;
+    background: #83a7dd;
+    width: 48%;
+    border: 2px solid;
+    background-clip: padding-box;
+    box-sizing: border-box;
+    
+    
+}
+    
+.intro button:hover {
+    padding: 5px;
+    margin: 5px;
+    background: #c2daff;
+    width: 30%;
+    cursor: pointer;
+}
+
+
+.control {
+    border: 1px solid;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    background: rgb(255, 255, 255); 
+    margin: 10px 0px;
+    min-height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.control button {
+    padding: 5px;
+    margin: 5px;
+    background: #aaccff;
+    width: 48%;
+    transition: .3s background;
+}
+
+.control button:hover {
+    padding: 5px;
+    margin: 5px;
+    background: #c2daff;
+    width: 48%;
+    cursor: pointer;
+}
+
+.X {
+    position: fixed;
+    border: 1px solid;
+    background: #fff;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    margin: 0 auto;
+    
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
+}
+
+.X:hover {
+    background: #eee;
+
+    transition: .2 top;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    font-style: italic;
+    background: rgb(200, 200, 250);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px inset;
+    
+}
+
+.story p {
+    text-indent: 30px;
+}
+
+#name {
+    color:rgb(91, 18, 119)
+}
+
+#personaje {
+    color: rgb(29, 100, 29)
+}
+
+#easy {
+    background: rgb(92, 182, 119);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#medium {
+    background: rgb(190, 192, 95);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#hard {
+    background: rgb(173, 99, 57);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#impossible {
+    color: white;
+    background: rgb(129, 39, 39);
+    padding-left: 5px;
+    padding-right: 5px;
+}
