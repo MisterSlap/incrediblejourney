@@ -1,49 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./image/hp.svg"><!-- 32×32 -->
-      
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./image/hp.svg" />
+    <!-- 32×32 -->
+
     <title>RPG</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="X">X</div>
-        <header>
-           
-            <div class="hud">
-                 
-            </div>
-        </header>
-        <main>
-            <div class="area-max">
-                <div class="area">
-                
-                </div>
-            </div>
+      <header>
+        <div class="hud"></div>
+      </header>
+      <main>
+        <div class="area-max">
+          <div class="area"></div>
+        </div>
 
-            <div class="control">
-                <button class="btn" id="1"></button>
-                <button class="btn" id="2"></button>
-                <button class="btn" id="3"></button>
-                <button class="btn" id="4"></button>
-                <button class="btn" id="5"></button>
-                <button class="btn" id="6"></button>
-                <button class="btn" id="7"></button>
-                <button class="btn" id="8"></button>
-                <button class="btn" id="9"></button>
-                <button class="btn" id="10"></button>
-
-            </div>
-        </main>
+        <div class="control">
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+        </div>
+      </main>
+      <footer>
+        <div class="inventory lhand">
+          <img src="./image/handleft.png" alt="левая рука" />
+        </div>
+        <div class="inventory rhand">
+          <img src="./image/handright.png" alt="правая рука" />
+        </div>
+        <div class="inventory bpack">
+          <img src="./image/bagpack.png" alt="рюкзак" />
+        </div>
+        <div class="inventory"></div>
+        <div class="inventory sound">
+          <img src="./image/snd-on.png" id="sound" alt="звук" />
+        </div>
+        <div class="inventory fullscreen">
+          <img src="./image/expand.png" alt="экран" />
+        </div>
+        <div class="inventory themetoggle">
+          <img src="./image/toggletheme.png" alt="тема" />
+        </div>
+        <div class="inventory X">
+          <img src="./image/erase.png" alt="сброс" />
+        </div>
+        <div class="inventory"><img src="./image/gear.png" alt="опции" /></div>
+      </footer>
     </div>
     <script src="./scripts/hud.js"></script>
-    
+    <script src="./scripts/toggle.js"></script>
     <script src="./scripts/game.js"></script>
     <script src="./scripts/gameplay.js"></script>
-    
-</body>
+  </body>
 </html>

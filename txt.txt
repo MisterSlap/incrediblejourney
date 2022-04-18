@@ -1,0 +1,6 @@
+function sound(){
+    const audio = new Audio()
+    audio.preload = 'auto'
+    audio.src = './creepy.mp3'
+    audio.play();
+}

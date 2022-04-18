@@ -1,12 +1,42 @@
+.dark .area-min::-webkit-scrollbar{ width: 20px; /* 1 - вертикальный скроллбар */}
+.dark .area-min::-webkit-scrollbar:horizontal{ height: 20px; /* 1 - горизонтальный скроллбар */}
+.dark .area-min::-webkit-scrollbar-button {background: #2f2733; /* 2 - кнопка */}
+.dark .area-min::-webkit-scrollbar-track {background: #282129;/* 3 - трек */}
+.dark .area-min::-webkit-scrollbar-track-piece { background: rgb(63, 60, 70); /* 4 – видимая часть трека */ }
+.dark .area-min::-webkit-scrollbar-thumb {background: #332533; border-radius: 6px; -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.25); /* 5 - ползунок */}
+
+.dark .area-max::-webkit-scrollbar{ width: 20px; /* 1 - вертикальный скроллбар */}
+.dark .area-max::-webkit-scrollbar:horizontal{ height: 20px; /* 1 - горизонтальный скроллбар */}
+.dark .area-max::-webkit-scrollbar-button {background: #2f2733; /* 2 - кнопка */}
+.dark .area-max::-webkit-scrollbar-track {background: #282129;/* 3 - трек */}
+.dark .area-max::-webkit-scrollbar-track-piece { background: rgb(63, 60, 70); /* 4 – видимая часть трека */ }
+.dark .area-max::-webkit-scrollbar-thumb {background: #332533; border-radius: 6px; -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.25); /* 5 - ползунок */}
+
+.dark::-webkit-scrollbar{ width: 20px; /* 1 - вертикальный скроллбар */}
+.dark::-webkit-scrollbar:horizontal{ height: 20px; /* 1 - горизонтальный скроллбар */}
+.dark::-webkit-scrollbar-button {background: #2f2733; /* 2 - кнопка */}
+.dark::-webkit-scrollbar-track {background: #282129;/* 3 - трек */}
+.dark::-webkit-scrollbar-track-piece { background: rgb(31, 31, 43); /* 4 – видимая часть трека */ }
+.dark::-webkit-scrollbar-thumb {background: #332533; border-radius: 6px; -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.25); /* 5 - ползунок */}
+
+::-webkit-scrollbar{ width: 20px;}
+::-webkit-scrollbar:horizontal{ height: 20px; }
+::-webkit-scrollbar-button {background: #bb9dca; }
+::-webkit-scrollbar-track {background: #8c7c8d;}
+::-webkit-scrollbar-track-piece { background: rgb(200, 200, 250);}
+::-webkit-scrollbar-thumb {background: #b98ebb; border-radius: 5px; -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.25);}
+
 * {
     padding: 0;
     margin: 0;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Kurale&family=Raleway&display=swap');
+
 body {
     background: rgb(88, 84, 92);
+    background-image: url('./image/bglight.jpg');
     -webkit-user-select: none;
                                 
 }
@@ -16,7 +46,11 @@ body {
     min-width: 400px;
     margin: 0 auto;
     font-family: 'Raleway', sans-serif;
-   
+
+}
+
+:fullscreen .container {
+    max-width: 75%;
 }
 
 .hud {
@@ -29,6 +63,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-image: url('./image/texture.png');
 }
 
 .hud img {
@@ -37,6 +72,7 @@ body {
     transition: .5s opacity;
     transform: .5s;
 }
+
 
 .hud img:hover{
     opacity: 1;
@@ -81,36 +117,89 @@ body {
     }
 }
 
+.control button{
+    transition: all 2s;
+    transform: scale(1, 2s);
+}
+
+.area p{
+    animation-duration: 2s;
+    animation-name: slidein;
+    font-size: 20px;
+}
+  
+@keyframes slidein {
+    from {
+        opacity: 0;
+        width: 100%;
+        margin-left: 100%;
+    }
+  
+    to {
+        opacity: 1;
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+
+.area-out{
+    animation-duration: .5s;
+    animation-name: slideout;
+}
+  
+@keyframes slideout {
+    from {
+        opacity: 1;
+        width: 100%;
+        margin-rigth: 0%;
+    }
+  
+    to {
+        opacity: 0;
+        width: 100%;
+        margin-rigth: 100%;
+    }
+}
+
+
+
 .area-max {
     text-align: justify;
     overflow: auto;
+    overflow-x: hidden;
     margin: 0 auto;
     padding: 5px;
-    min-width: 400px;
-    max-width: 800px;
+    /* min-width: 400px; */
+    /* max-width: 800px; */
     height: 520px;
     border: 1px solid;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
     background: rgb(255, 255, 255);   
+    background-image: url('./image/texture.png');
 }
 
 
 .area-min {
     text-align: justify;
     overflow: auto;
+    overflow-x: hidden;
     margin: 0 auto;
-    min-width: 400px;
-    max-width: 800px;
+    /* min-width: 400px; */
+    /* max-width: 800px; */
     height: 200px;
     padding: 5px;
     border: 1px solid;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
     background: rgb(255, 255, 255);   
+    background-image: url('./image/texture.png');
 }
+
+
 
 .intro {
     font-family: 'Kurale', serif;
     text-align: center;
+    
 }
 
 .intro button {
@@ -119,6 +208,7 @@ body {
     background: #aaccff;
     width: 30%;
     transition: .3s background;
+    
 }
 .intro input {
     padding: 5px;
@@ -150,40 +240,98 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-image: url('./image/texture.png');
+    
 }
 
 .control button {
     padding: 5px;
     margin: 5px;
-    background: #aaccff;
+    background:  #aaccff 50%;
+    background: linear-gradient(90deg,#799dd1 0%, #aaccff 50%, #799dd1 100%);
     width: 48%;
-    transition: .3s background;
+    transition: .3s  opacity;
+    font-size: 20px;
 }
 
 .control button:hover {
     padding: 5px;
     margin: 5px;
-    background: #c2daff;
+    /* background: #c2daff; */
+    opacity: .8;
     width: 48%;
     cursor: pointer;
 }
 
-.X {
-    position: fixed;
+.btn-into{
+    animation-duration: 1s;
+    animation-name: buttonin;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes buttonin {
+    from {
+        opacity: 0;
+    }
+  
+    to {
+        opacity: 1;
+    }
+}
+
+.btn-outo{
+    animation-duration: 1s;
+    animation-name: buttonOut;
+    animation-fill-mode: forwards;
+    
+}
+  
+@keyframes buttonOut {
+    from {
+        opacity: 1;
+    }
+  
+    to {
+        opacity: 0;
+    }
+}
+
+footer {
+    border: 1px solid;
+    background-image: url('./image/texture.png');
+    padding: 10px;
+    display: flex;
+    align-items:flex-end;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+}
+
+.inventory .dark {
+    filter: invert(100%);
+    background: rgb(0, 0, 0);
+}
+
+.inventory {
+    
     border: 1px solid;
     background: #fff;
-    width: 32px;
-    height: 32px;
-    text-align: center;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
-    
+    vertical-align: middle;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
     cursor: pointer;
-    
+    visibility: visible;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
 }
 
-.X:hover {
+.hide {
+    visibility: hidden
+}
+
+.inventory:hover {
     background: #eee;
 
     transition: .2 top;
@@ -200,13 +348,30 @@ h4 {
     background: rgb(200, 200, 250);
     margin-bottom: 10px;
     margin-top: 10px;
+
+    animation-duration: .5s;
+    animation-name: hanim;
 }
+  
+@keyframes hanim {
+    from {
+        opacity: 0;
+
+    }
+  
+    to {
+        opacity: 1;
+
+    }
+}
+
 
 hr {
     margin-top: 10px;
     margin-bottom: 10px;
     border: 1px inset;
-    
+    animation-duration: .5s;
+    animation-name: hanim;
 }
 
 .story p {
@@ -241,4 +406,54 @@ hr {
     background: rgb(129, 39, 39);
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.dark {
+    background: rgb(20, 20, 20);
+    background-image: url('./image/mramor.png');
+    color: rgb(241, 241, 241);
+}
+
+
+
+
+.dark .hud {
+    background-image: url('./image/noise.jpg');
+
+}
+
+.dark footer {
+    background-image: url('./image/noise.jpg');
+}
+
+.dark .inventory {
+    filter: invert(100%);
+    box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+}
+
+.dark .area-max{
+    background: rgb(22, 21, 21);
+    background-image: url('./image/bgdark.jpg');
+}
+.dark .area-min{
+    background: rgb(22, 21, 21);
+    background-image: url('./image/bgdark.jpg');
+}
+.dark .control{
+    
+    background-image: url('./image/noise.jpg');
+}
+
+.dark .control button {
+    padding: 5px;
+    margin: 5px;
+    background:  #232427 50%;
+    background: linear-gradient(90deg,#1c1e22 0%, #000000 50%, #14161a 100%);
+    color:rgb(200, 200, 250);
+    width: 48%;
+    transition: .3s  opacity;
+}
+
+.dark h4 {
+    background: rgb(13, 15, 17);
 }
